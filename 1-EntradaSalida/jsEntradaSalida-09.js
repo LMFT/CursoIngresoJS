@@ -5,12 +5,12 @@ mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
-	var sueldo=txtIdSueldo.value;
+	var sueldo=document.getElementById("txtIdNumeroDivisor").value;
 	var resultado;
 
 	sueldo=parseInt(sueldo);
 	
 	resultado= sueldo*1.1;
 
-	txtIdResultado.value=resultado;
+	document.getElementById("txtIdResultado").value=resultado;
 }

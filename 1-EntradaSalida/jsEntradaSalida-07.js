@@ -7,8 +7,8 @@ ej.: "la Resta es 750"*/
 
 function sumar()
 {	
-	var numero_a=txtIdNumeroUno.value;
-	var numero_b=txtIdNumeroDos.value;
+	var numero_a=document.getElementById("txtIdNumeroUno").value;
+	var numero_b=document.getElementById("txtIdNumeroDos").value;
 	var resultado;
 
 	numero_a=parseInt(numero_a);
@@ -22,8 +22,8 @@ function sumar()
 function restar()
 {
 	
-	var numero_a=txtIdNumeroUno.value;
-	var numero_b=txtIdNumeroDos.value;
+	var numero_a=document.getElementById("txtIdNumeroUno").value;
+	var numero_b=document.getElementById("txtIdNumeroDos").value;
 	var resultado;
 
 	numero_a=parseInt(numero_a);
@@ -36,8 +36,8 @@ function restar()
 function multiplicar()
 { 
 
-	var numero_a=txtIdNumeroUno.value;
-	var numero_b=txtIdNumeroDos.value;
+	var numero_a=document.getElementById("txtIdNumeroUno").value;
+	var numero_b=document.getElementById("txtIdNumeroDos").value;
 	var resultado;
 
 	numero_a=parseInt(numero_a);
@@ -49,8 +49,8 @@ function multiplicar()
 
 function dividir()
 {
-	var numero_a=txtIdNumeroUno.value;
-	var numero_b=txtIdNumeroDos.value;
+	var numero_a=document.getElementById("txtIdNumeroUno").value;
+	var numero_b=document.getElementById("txtIdNumeroDos").value;
 	var resultado;
 
 	numero_a=parseInt(numero_a);
@@ -64,7 +64,7 @@ function dividir()
 	{
 		numero_a=parseInt(numero_a);
 		numero_b=parseInt(numero_b);
-		resultado= numero_a / numero_b;
+		resultado = numero_a / numero_b;
 		alert("El resultado de la division es: "+resultado);
 	}
 }
