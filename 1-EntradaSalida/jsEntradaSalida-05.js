@@ -4,7 +4,7 @@ ej.: "Usted se llama José y tiene 66 años" 	*/
 function mostrar()
 {
 	//Ingreso e inicializo las variables
-	let edadIngresada = document.getElementById("txtIdEdad").value;
+	let edadIngresada = parseInt(document.getElementById("txtIdEdad").value);
 	let nombreIngresado=document.getElementById("txtIdNombre").value;
 
 	//Muestro las variables concatenadas con un "+" dentro del mismo alert
