@@ -6,14 +6,18 @@ en el cuadro de texto "RESULTADO".*/
 function mostrarAumento()
 {
 	//Declaro las variables
-	let sueldo=document.getElementById("txtIdNumeroDivisor").value;
+	let sueldo = document.getElementById("txtIdSueldo").value;
+	let aumento;
 	let resultado;
 
 	//Convierto el sueldo a numero
-	sueldo=parseInt(sueldo);
-	
+	sueldo=parseFloat(sueldo);
+
+	//Calculo el aumento
+	aumento = sueldo * 10 / 100;
+
 	//Aplico el incremento
-	resultado= sueldo*1.1;
+	resultado = sueldo + aumento;
 
 	//Muestro el resultado por el cuadro de texto
 	document.getElementById("txtIdResultado").value=resultado;
