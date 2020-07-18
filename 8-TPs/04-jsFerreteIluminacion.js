@@ -44,11 +44,9 @@ function CalcularPrecio() {
 
     //Secuencia B: Si la cantidad de lamparas es 5 y son "ArgentinaLuz" aplica 40% de descuento, otras marcas aplican 30%
     if (cantidad == 5 && marca == "ArgentinaLuz") {
-        descuento = 40 / 100;
+        descuento = 60 / 100;
 
         precioFinal = cantidad * PRECIO_LAMPARA * descuento;
-
-        document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
 
         //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
         if (precioFinal > 120) {
@@ -59,114 +57,144 @@ function CalcularPrecio() {
             document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal + ". IIBB: Usted abonó $" + impuesto + " en concepto de ingresos brutos";
         }
 
+        else
+        {
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
+        }
 
     }
 
-    if (cantidad == 5 && marca != "ArgentinaLuz") {
-        descuento = 30 / 100
+    if (cantidad == 5 && marca != "ArgentinaLuz") 
+    {
+        descuento = 70 / 100;
 
-        precioFinal = cantidad * PRECIO_LAMPARA * descuento
+        precioFinal = cantidad * PRECIO_LAMPARA * descuento;
 
-        document.getElementById("txtIdprecioDescuento") = "$" + precioFinal;
-
-        //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
-        if (precioFinal > 120) {
+         //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
+         if (precioFinal > 120) {
             impuesto = precioFinal * 10 / 100;
 
             precioFinal = precioFinal + impuesto;
 
-            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal + ". IIBB: Usted abonó $" + impuesto + " en concepto de ingresos brutos";
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2) + ". IIBB: Usted abonó $" + impuesto.toFixed(2) + " en concepto de ingresos brutos";
+        }
+
+        else
+        {
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
         }
     }
 
     /*Secuencia C: si la cantidad es igual a 4 lamparas y marcas "ArgentinaLuz" o "FelipeLamparas" aplica 25% descuento
      pero si son otras marcas el descuento es de 20%*/
     if ((cantidad == 4 && marca == "ArgentinaLuz") || (cantidad == 4 && marca == "FelipeLamparas")) {
-        descuento = 25 / 100;
+        descuento = 75 / 100;
 
         precioFinal = cantidad * PRECIO_LAMPARA * descuento;
 
-        document.getElementById("txtIdprecioDescuento") = "$" + precioFinal;
-
-        //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
-        if (precioFinal > 120) {
+         //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
+         if (precioFinal > 120) {
             impuesto = precioFinal * 10 / 100;
 
             precioFinal = precioFinal + impuesto;
 
-            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal + ". IIBB: Usted abonó $" + impuesto + " en concepto de ingresos brutos";
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2) + ". IIBB: Usted abonó $" + impuesto.toFixed(2) + " en concepto de ingresos brutos";
         }
 
+        else
+        {
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
+        }
     }
 
     if (cantidad == 4 && (marca != "ArgentinaLuz" && marca != "FelipeLamparas")) {
-        descuento = 20 / 100;
+        descuento = 80 / 100;
 
         precioFinal = cantidad * PRECIO_LAMPARA * descuento;
 
-        document.getElementById("txtIdprecioDescuento") = "$" + precioFinal;
-
-        //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
-        if (precioFinal > 120) {
+         //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
+         if (precioFinal > 120) {
             impuesto = precioFinal * 10 / 100;
 
             precioFinal = precioFinal + impuesto;
 
-            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal + ". IIBB: Usted abonó $" + impuesto + " en concepto de ingresos brutos";
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2) + ". IIBB: Usted abonó $" + impuesto.toFixed(2) + " en concepto de ingresos brutos";
+        }
+
+        else
+        {
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
         }
     }
 
     /*Secuencia D: Si compra 3 lamparas "ArgentinaLuz" 15% de descuento, 10% si la marca es "FelipeLamparas" 
-       y 5% para otras marcas*/
+       y 5% para otras marcas*/ 
 
-    if (cantidad == 3 && marca == "ArgentinaLuz") {
-        descuento = 15 / 100;
-
-        precioFinal = cantidad * PRECIO_LAMPARA * descuento;
-
-        document.getElementById("txtIdprecioDescuento") = "$" + precioFinal;
-
-        //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
-        if (precioFinal > 120) {
-            impuesto = precioFinal * 10 / 100;
-
-            precioFinal = precioFinal + impuesto;
-
-            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal + ". IIBB: Usted abonó $" + impuesto + " en concepto de ingresos brutos";
-        }
-    }
-
-    if (camtidad == 3 && marca == "FelipeLamparas") {
-        descuento = 10 / 100
+    if (cantidad == 3 && marca == "ArgentinaLuz") 
+    {
+        descuento = 85 / 100;
 
         precioFinal = cantidad * PRECIO_LAMPARA * descuento;
 
-        document.getElementById("txtIdprecioDescuento") = "$" + precioFinal;
-
-        //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
-        if (precioFinal > 120) {
+         //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
+         if (precioFinal > 120) 
+         {
             impuesto = precioFinal * 10 / 100;
 
             precioFinal = precioFinal + impuesto;
 
-            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal + ". IIBB: Usted abonó $" + impuesto + " en concepto de ingresos brutos";
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2) + ". IIBB: Usted abonó $" + impuesto.toFixed(2) + " en concepto de ingresos brutos";
+        }
+
+        else
+        {
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
         }
     }
 
-    else {
-        descuento = 5 / 100;
+    if (cantidad == 3 && marca == "FelipeLamparas") 
+    {
+        descuento = 90 / 100;
 
-        precioFinal = cantidad * PRECIO_LAMPARA * descuento
+        precioFinal = cantidad * PRECIO_LAMPARA * descuento;
 
-        document.getElementById("txtIdprecioDescuento") = "$" + precioFinal;
-
-        //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
-        if (precioFinal > 120) {
+         //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
+         if (precioFinal > 120) 
+         {
             impuesto = precioFinal * 10 / 100;
 
             precioFinal = precioFinal + impuesto;
 
-            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal + ". IIBB: Usted abonó $" + impuesto + " en concepto de ingresos brutos";
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2) + ". IIBB: Usted abonó $" + impuesto.toFixed(2) + " en concepto de ingresos brutos";
+        }
+
+        else
+        {
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
+        }
+    }
+
+    if (cantidad == 3 && marca != "FelipeLamparas" && marca != "ArgentinaLuz") 
+    {
+        descuento = 95 / 100;
+
+        precioFinal = cantidad * PRECIO_LAMPARA * descuento;
+
+         //Secuencia lógica E: Si el importe supera $120 adicionar un 10% en concepto de ingresos brutos
+         if (precioFinal > 120) 
+         {
+            impuesto = precioFinal * 10 / 100;
+
+            precioFinal = precioFinal + impuesto;
+
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal.toFixed(2) + ". IIBB: Usted abonó $" + impuesto.toFixed(2) + " en concepto de ingresos brutos";
+        }
+
+        else
+        {
+            document.getElementById("txtIdprecioDescuento").value = "$" + precioFinal;
         }
     }
 }
+
+  
