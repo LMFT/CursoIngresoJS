@@ -1,9 +1,11 @@
 function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
-	let nota = Math.random()*11;
+	let nota;
+	let maximo = 10;
+	let minimo = 1;
 
-	nota = parseInt(nota);
+	nota = Math.round(Math.random() * (maximo-minimo) + minimo);
 
 	if(nota>=9)
 	{
