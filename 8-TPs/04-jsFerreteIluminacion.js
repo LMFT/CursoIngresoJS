@@ -8,22 +8,26 @@ C.	Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas
 D.	Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento es del 15%, si es  
     “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%.
 E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de ingresos brutos 
-    en informar del impuesto con el siguiente mensaje: ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
+    en informar del impuestoFinal con el siguiente mensaje: ”Usted pago X de IIBB.”, siendo X el impuestoFinal que se pagó. 
 
  */
-function CalcularPrecio() {
+
+ /*
+function CalcularPrecio() 
+{
      //Declaro las variables
     let cantidad = parseInt(document.getElementById("txtIdCantidad").value);
     let marca = document.getElementById("Marca").value;
     let descuento;
     let precioFinal;
     let precioUnitario;
-    let impuesto;
+    let impuestoFinal;
     const IMPUESTO = 1.1
     const PRECIO_LAMPARA = 35;
 
     //Secuencia A
-    if (cantidad >= 6) {
+    if (cantidad >= 6) 
+    {
         //Asigno valor al descuento de los productos
         descuento = 0.5;
 
@@ -39,12 +43,12 @@ function CalcularPrecio() {
         }
         else
         {
-            impuesto = precioFinal * 0.1;
+            impuestoFinal = precioFinal * 0.1;
             precioUnitario = precioUnitario * IMPUESTO;
             precioFinal = precioFinal * IMPUESTO;
 
             document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
 
         }
 
@@ -69,12 +73,12 @@ function CalcularPrecio() {
         }
         else
         {
-            impuesto = precioFinal * 0.1;
+            impuestoFinal = precioFinal * 0.1;
             precioUnitario = precioUnitario * IMPUESTO;
             precioFinal = precioFinal * IMPUESTO;
 
             document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
         }
     }
 
@@ -95,12 +99,12 @@ function CalcularPrecio() {
         }
         else
         {
-            impuesto = precioFinal * 0.1;
+            impuestoFinal = precioFinal * 0.1;
             precioUnitario = precioUnitario * IMPUESTO;
             precioFinal = precioFinal * IMPUESTO;
 
             document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
         }
     }
     // Secuencia C
@@ -121,12 +125,12 @@ function CalcularPrecio() {
        }
        else
        {
-           impuesto = precioFinal * 0.1;
+           impuestoFinal = precioFinal * 0.1;
            precioUnitario = precioUnitario * IMPUESTO;
            precioFinal = precioFinal * IMPUESTO;
 
            document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-           alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+           alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
        } 
     }
     else if (cantidad == 4 && !(marca == "ArgentinaLuz" || marca == "FelipeLamparas"))
@@ -146,12 +150,12 @@ function CalcularPrecio() {
        }
        else
        {
-           impuesto = precioFinal * 0.1;
+           impuestoFinal = precioFinal * 0.1;
            precioUnitario = precioUnitario * IMPUESTO;
            precioFinal = precioFinal * IMPUESTO;
 
            document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-           alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+           alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
        } 
     }
 
@@ -173,12 +177,12 @@ function CalcularPrecio() {
         }
         else
         {
-            impuesto = precioFinal * 0.1;
+            impuestoFinal = precioFinal * 0.1;
             precioUnitario = precioUnitario * IMPUESTO;
             precioFinal = precioFinal * IMPUESTO;
 
             document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
         }
     }
     else if (cantidad == 3 && marca == "FelipeLamparas")
@@ -198,12 +202,12 @@ function CalcularPrecio() {
         }
         else
         {
-            impuesto = precioFinal * 0.1;
+            impuestoFinal = precioFinal * 0.1;
             precioUnitario = precioUnitario * IMPUESTO;
             precioFinal = precioFinal * IMPUESTO;
 
             document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
         }
     }
     else if (cantidad == 3 && (marca != "ArgentinaLuz" && marca != "FelipeLamparas"))
@@ -223,19 +227,26 @@ function CalcularPrecio() {
         }
         else
         {
-            impuesto = precioFinal * 0.1;
+            impuestoFinal = precioFinal * 0.1;
             precioUnitario = precioUnitario * IMPUESTO;
             precioFinal = precioFinal * IMPUESTO;
 
             document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+            alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de ingresos brutos");
         }
     }
-    else
+    //En caso de que se compren 2 o menos lamparas hace la cuenta normalmente
+    else if(cantidad>0 && cantidad<=2)
     {
         precioFinal = PRECIO_LAMPARA * cantidad;
 
         document.getElementById("txtIdprecioDescuento").value = "$" + PRECIO_LAMPARA;
         alert("El monto final es $"+precioFinal);
+    }
+
+    //Si se seleccionan 0 lamparas o una cantidad negativa el programa tira error
+    else
+    {
+        alert("La cantidad ingresada es inválida")
     }
 }
