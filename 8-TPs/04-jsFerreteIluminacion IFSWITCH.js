@@ -19,354 +19,71 @@ function CalcularPrecio()
     let descuento;
     let precioFinal;
     let precioUnitario;
-    let impuestoFinal;
-    const IMPUESTO = 1.1
+    let impuesto;
     const PRECIO_LAMPARA = 35;
 
-    switch(marca)
+    switch(cantidad)
     {
-        case "ArgentinaLuz":
-            //Secuencia A
-
-            if(cantidad>=6)
+        case 1:
+        case 2:
+            descuento = 1
+            break;
+        case 3:
+            if (marca == "ArgentinaLuz")
             {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.5;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-            }
-            // Secuencia B
-            else if(cantidad==5)
-            {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.6;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-            }
-            //Secuencia C
-           else if(cantidad==4)
-            {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.75;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-            }
-            //Secuencia D
-            else if(cantidad==3)
-            {
-                //Asigno el valor del descuento y calculo el precio final
                 descuento = 0.85;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
 
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-                
             }
-
-            //En caso de que se compren 2 o menos lamparas hace la cuenta normalmente
-            else if(cantidad>0 && cantidad<=2)
+            else if (marca == "FelipeLamparas")
             {
-                precioFinal = PRECIO_LAMPARA * cantidad;
-
-                document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-                alert("El monto final es $"+precioFinal.toFixed(2));
-            }
-
-            //Si se seleccionan 0 lamparas o una cantidad negativa el programa tira error
-            else
-            {
-                alert("La cantidad ingresada es inválida")
-            }
-            break;
-        
-        case "FelipeLamparas":
-             //Secuencia A
-    
-            if(cantidad>=6)
-            {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.5;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-    
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                 else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-            }
-            // Secuencia B
-            else if(cantidad==5)
-            {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.7;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-    
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                   {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                        
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                    }
-            }
-            //Secuencia C
-            else if(cantidad==4)
-            {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.75;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-                     //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-            }
-            //Secuencia D
-            else if(cantidad==3)
-            {
-                //Asigno el valor del descuento y calculo el precio final
                 descuento = 0.9;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-    
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-                 
             }
-            //En caso de que se compren 2 o menos lamparas hace la cuenta normalmente
-            else if(cantidad>0 && cantidad<=2)
-            {
-                precioFinal = PRECIO_LAMPARA * cantidad;
-                document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-                alert("El monto final es $"+precioFinal.toFixed(2));
-            }
-    
-            //Si se seleccionan 0 lamparas o una cantidad negativa el programa tira error
             else
             {
-                alert("La cantidad ingresada es inválida")
+                descuento = 0.95;
             }
             break;
-
-            default:
-            //Secuencia A
-       
-           if(cantidad>=6)
+        case 4:
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
             {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.5;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-       
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                       
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-            }
-            // Secuencia B
-            else if(cantidad==5)
-            {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.7;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-       
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                       
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-            }
-            //Secuencia C
-            else if(cantidad==4)
-            {
-                //Asigno el valor del descuento y calculo el precio final
                 descuento = 0.75;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-       
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                     
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
             }
-            //Secuencia D
-            else if(cantidad==3)
-            {
-                //Asigno el valor del descuento y calculo el precio final
-                descuento = 0.9;
-                precioUnitario = PRECIO_LAMPARA * descuento;
-                precioFinal = precioUnitario * cantidad;
-       
-                //Secuencia E
-                if(precioFinal <= 120)
-                {
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2));
-                }
-                else
-                {
-                    impuestoFinal = precioFinal/10;
-                    precioUnitario = precioUnitario * IMPUESTO;
-                    precioFinal = precioFinal * IMPUESTO;
-                    
-                    document.getElementById("txtIdprecioDescuento").value = "$"+precioUnitario.toFixed(2);
-                    alert("El monto total es de $"+precioFinal.toFixed(2)+". Usted abonó $"+impuestoFinal.toFixed(2)+" en concepto de impuestos brutos");
-                }
-                    
-            }
-            //En caso de que se compren 2 o menos lamparas hace la cuenta normalmente
-            else if(cantidad>0 && cantidad<=2)
-            {
-                precioFinal = PRECIO_LAMPARA * cantidad;
-                document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
-                alert("El monto final es $"+precioFinal.toFixed(2));
-            }
-       
-            //Si se seleccionan 0 lamparas o una cantidad negativa el programa tira error
             else
             {
-                alert("La cantidad ingresada es inválida")
+                descuento = 0.8;
             }
             break;
-
+        case 5:
+            if (marca == "ArgentinaLuz")
+            {
+                descuento = 0.6
+            }
+            else
+            {
+                descuento = 0.7;
+            }
+            break;
+        default:
+        descuento = 0.5
+        break;
     }
+
+    precioUnitario = PRECIO_LAMPARA * descuento;
+    precioFinal = precioUnitario * cantidad;
+
+    if (precioFinal > 120)
+    {
+        impuesto = precioFinal / 10;
+        precioFinal += impuesto;
+
+        document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
+        alert("El monto total es de $"+precioFinal.toFixed(2)+". IIBB: Usted abonó $"+impuesto.toFixed(2)+" en concepto de ingresos brutos");
+    }
+    else
+    {
+        document.getElementById("txtIdprecioDescuento").value = "$" + precioUnitario.toFixed(2);
+        alert("El monto total es de $"+precioFinal.toFixed(2));  
+    }
+
+
 }

@@ -2,6 +2,7 @@ function mostrar()
 {
 	let destino =document.getElementById("txtIdDestino").value;
 	
+	//Muestro la direccion correspondiente a cada lugar
 	switch(destino)
 	{
 		case "Bariloche":
@@ -16,7 +17,7 @@ function mostrar()
 			alert("Este");
 			break;
 		
-			case "Cordoba":
+			case "Ushuaia":
 			alert("Sur");
 			break;
 	}

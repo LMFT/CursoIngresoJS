@@ -1,7 +1,7 @@
 function mostrar()
 {
 	//tomo el mes
-	var mes = document.getElementById("txtIdMes").value;
+	let mes = document.getElementById("txtIdMes").value;
 	
 	// Creo el switch y agrego los cuadros de texto
 	switch (mes)

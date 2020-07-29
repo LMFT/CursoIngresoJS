@@ -3,6 +3,7 @@ function mostrar()
 	//tomo el mes
 	let mes = document.getElementById("txtIdMes").value;
 
+	//Muestro los mensajes por switch
 	switch (mes)
 	{
 		case "Febrero":

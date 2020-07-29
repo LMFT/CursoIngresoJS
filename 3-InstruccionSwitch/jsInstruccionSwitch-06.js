@@ -3,6 +3,7 @@ function mostrar()
 	//tomo la hora
 	let hora =parseInt(document.getElementById("txtIdHora").value);
 
+	//Agrupo los case y muestro los mensajes correspondientes
 	switch(hora)
 	{
 		case 0:

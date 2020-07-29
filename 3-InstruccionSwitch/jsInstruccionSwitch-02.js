@@ -1,8 +1,10 @@
 function mostrar()
 {
 	//tomo el mes
-	var mes = document.getElementById("txtIdMes").value;
+	let mes = document.getElementById("txtIdMes").value;
 	
+
+	//Agrupo y muestro mensajes correspondientes
 	switch (mes)
 	{
 		case "Enero":

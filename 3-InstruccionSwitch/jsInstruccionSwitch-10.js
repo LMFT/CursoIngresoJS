@@ -3,8 +3,10 @@ function mostrar()
 	let estacion = document.getElementById("txtIdEstacion").value;
 	let destino = document.getElementById("txtIdDestino").value;
 
+	//Creo un case por cada destino
 	switch(destino)
 	{
+		//Muestro en que estaciones se viaja
 		case "Bariloche":
 		
 			if(estacion == "Invierno" || estacion == "Otoño")
@@ -17,6 +19,7 @@ function mostrar()
 			}
 			break;
 		
+			//Muestro en que estaciones se viaja
 		case "Cataratas":
 		
 			if(estacion == "Invierno")
@@ -29,6 +32,7 @@ function mostrar()
 			}
 			break;
 		
+			//Muestro en que estaciones se viaja
 		case "Mar del plata":
 		
 			if(estacion == "Invierno")
@@ -42,6 +46,7 @@ function mostrar()
 			
 			break;
 		
+			//Muestro en que estaciones se viaja
 		case "Cordoba":
 		
 			if(estacion == "Invierno" || estacion == "Verano")

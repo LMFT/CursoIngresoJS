@@ -5,86 +5,84 @@ function mostrar()
 	const ESTADIA = parseFloat(15000);
 	let precio;
 
+	//Creo un switch por cada lugar
 	switch(destino)
 	{
 	
 		case "Bariloche":
 		
+			//Calculo precio segun estacion
 			if(estacion == "Invierno")
 			{
 				precio =parseFloat(ESTADIA * 1.2);
-				alert("El precio final es de $"+precio);
 			}
 			else if(estacion == "Verano")
 			{
 				precio = parseFloat(ESTADIA * 0.8);
-				alert("El precio final es de $"+precio);
 			}
 			else
 			{
 				precio = parseFloat(ESTADIA * 1.1);
-				alert("El precio final es de $"+precio);
 			}
 			
 			break;
 		
 		case "Cataratas":
-	
+			
+			//Calculo precio segun estacion
 			if(estacion == "Invierno")
 			{
 				precio =parseFloat(ESTADIA * 0.9);
-				alert("El precio final es de $"+precio);
 			}
 			else if(estacion == "Verano")
 			{
 				precio = parseFloat(ESTADIA * 1.1);
-				alert("El precio final es de $"+precio);
 			}
 			else
 			{
 				precio = parseFloat(ESTADIA * 1.1);
-				alert("El precio final es de $"+precio);
 			}
 			
 			break;
 
 		case "Mar del plata":
 
+			//Calculo precio segun estacion
 			if(estacion == "Invierno")
 			{
 				precio =parseFloat(ESTADIA * 0.8);
-				alert("El precio final es de $"+precio);
 			}
 			else if(estacion == "Verano")
 			{
 				precio = parseFloat(ESTADIA * 1.2);
-				alert("El precio final es de $"+precio);
 			}
 			else
 			{
 				precio = parseFloat(ESTADIA * 1.1);
-				alert("El precio final es de $"+precio);
 			}
 			
 			break;
 
 		case "Cordoba":
+
+			//Calculo precio segun estacion
+
 			if(estacion == "Invierno")
 			{
 				precio =parseFloat(ESTADIA * 0.9);
-				alert("El precio final es de $"+precio);
 			}
 			else if(estacion == "Verano")
 			{
 				precio = parseFloat(ESTADIA * 1.1);
-				alert("El precio final es de $"+precio);
 			}
 			else
 			{
 				precio = parseFloat(ESTADIA);
-				alert("El precio final es de $"+precio);
 			}
 			
 			break;
 	}
+
+	alert("El precio final es de $"+precio);
+
 }//FIN DE LA FUNCIÓN
