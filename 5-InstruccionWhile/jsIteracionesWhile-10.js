@@ -13,7 +13,7 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//Declaro las variables y fuerzo la entrada al bucle
-	let respuesta = 's';
+	let respuesta;
 	let numero;
 	let sumaNegativos = 0;
 	let sumaPositivos = 0;
@@ -21,15 +21,20 @@ function mostrar()
 	let cantidadNegativos = 0;
 	let cantidadCeros = 0;
 	let cantidadPares = 0;
-	let promedioPositivos;
-	let promedioNegativos;
+	let promedioPositivos = 0;
+	let promedioNegativos = 0;
 	let diferencia;
 
 	//El bucle se mantiene mientras el usuario quiera cargar datos
-	while(respuesta=='s')
+	do
 	{
 		//Pido el numero al usuario
 		numero = parseFloat(prompt("Ingrese un número"));
+
+		while(isNaN(numero))
+		{
+			numero = parseFloat(prompt("El numero ingresado no es un número. Reingrese un número"))
+		}
 
 		//Creo un condicional para analizar que valor toma el numero y ejecutar el codigo correspondiente
 		//Si ya se inicializo la suma, se suma normalmente y se cuenta un positivo adicional
@@ -50,31 +55,38 @@ function mostrar()
 			cantidadCeros++;
 		}
 
-		//Si el resto del numero dividido 2 es 0 el numero es par
-		if ((numero % 2) == 0)
+		//Si el resto del numero dividido por 2 es 0 el numero es par
+		if (numero % 2 == 0 )
 		{
 			cantidadPares++;
 		}
 
 		//Pregunto al usuario si quiere ingresar mas numeros
 		respuesta=prompt("Desea ingresar otro numero?");
+	}while(respuesta == 's');
+
+	//Calculo los promedios usando un condicional para restringir divisiones por 0
+	if(cantidadPositivos != 0)
+	{
+		promedioPositivos = sumaPositivos / cantidadPositivos;
 	}
 
-	//Calculo los promedios
-	promedioPositivos = sumaPositivos / cantidadPositivos;
-	promedioNegativos = sumaNegativos / cantidadNegativos;
+	if(cantidadNegativos !=0)
+	{
+		promedioNegativos = sumaNegativos / cantidadNegativos;
+	}
+
 	//Calculo la diferencia
-	diferencia = sumaNegativos + sumaPositivos;
+	diferencia = cantidadPositivos - cantidadNegativos;
 
 	//Muestro por Document los resultados
-	//document.write("la suma de negativos es :"+sumaNegativos+ " /// La suma de positivos es: "+ sumaPositivos + " /// La cantidad de positivos es: " + cantidadPositivos + " /// La cantidad de negativos es: " + cantidadNegativos + " /// La cantidad de ceros es: " + cantidadCeros + " /// La cantidad de números pares es: " + cantidadPares + " /// El promedio de los positivos es: " + promedioPositivos + " /// El promedio de negaivos es: " + promedioNegativos + " /// La diferencia es: " + diferencia);
-	console.log("La suma de negativos es: " + sumaNegativos);
-	console.log("La suma de positivos es: " + sumaPositivos);
-	console.log("La cantidad de positivos es: " + cantidadPositivos);
-	console.log("La cantidad de negativos es: " + cantidadNegativos);
-	console.log("La cantidad de ceros es: " + cantidadCeros);
-	console.log("La cantidad de numeros pares es: " + cantidadPares);
-	console.log("El promedio de positivos es: " + promedioPositivos);
-	console.log("El promedio de negativos es: " + promedioNegativos);
-	console.log("La diferencia es: " + diferencia);
+	document.write("La suma de negativos es: " + sumaNegativos + "</br>");
+	document.write("La suma de positivos es: " + sumaPositivos + "</br>");
+	document.write("La cantidad de positivos es: " + cantidadPositivos + "</br>");
+	document.write("La cantidad de negativos es: " + cantidadNegativos + "</br>");
+	document.write("La cantidad de ceros es: " + cantidadCeros + "</br>");
+	document.write("La cantidad de numeros pares es: " + cantidadPares + "</br>");
+	document.write("El promedio de positivos es: " + promedioPositivos + "</br>");
+	document.write("El promedio de negativos es: " + promedioNegativos + "</br>");
+	document.write("La diferencia es: " + diferencia + "</br>");
 }//FIN DE LA FUNCIÓN

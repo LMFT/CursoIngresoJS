@@ -4,60 +4,46 @@ sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
 	//Declaro las variables e inicializo la resuesta para forzar la entrada al bucle
-	let respuesta = 's';
-	let suma;
-	let producto;
+	let respuesta;
+	let suma = 0;
+	let producto = 1;
 	let numero;
+	let flag = 0;
 	
 	//Mientras el usuario quiera ingresar otra respuesta se mantiene el bucle
-	while(respuesta == 's')
+	do
 	{
 		//Pido el numero al usuario
 		numero = parseFloat(prompt("Ingrese un numero"));
 		
-		//Comparo el valor del numero y hago la operacion correspondiente. Si la suma se usa por primera vez la inicializo aca
-		if (numero >=0 && suma == undefined)
+		while(isNaN(numero))
 		{
-			suma = numero;
+			numero = parseFloat(prompt("Caracter incorrecto, por favor ingrese un número"))
 		}
-		//Si ya se sumo, prosigo la suma aca
-		else if (numero >= 0)
+		//Analizo el valor del numero y hago la operacion correspondiente
+		//Si existe un numero negativo ingresado levanto un flag
+		if (numero >= 0)
 		{
-			suma += numero
+			suma += numero;
 		}
-		//Si el producto no esta definido y tengo que multiplicar, lo inicializo en 1 y hago la cuenta
-		else if (producto == undefined && numero <0)
-		{;
-			producto=numero;
-		}
-		// Si el producto ya se hizo previamente hago la cuenta de forma normal
 		else
 		{
-			producto *=numero;
+			producto*=numero;
+			flag = 1;
 		}
 
+		//Pregunto al usuario si desea ingresar otro numero
 		respuesta = prompt("Si desea ingresar otro numero ingrese si");
-	}
+	}while(respuesta == 's');
 	
-	//Si la suma no esta definida (nunca sumé) no muestro el valor de la suma
-	if (suma == undefined)
+	//Si el usuario no ingresó negativos el producto vale 0
+	if (flag == 0)
 	{
-		document.getElementById("txtIdSuma").value = "";
-	}
-	// Si la suma esta definida muestro su valor
-	else
-	{
-		document.getElementById("txtIdSuma").value = suma;
-	}
-	// Si el producto no está definido (nunca multipliqué) no muestro su valor
-	if (producto == undefined)
-	{
-		document.getElementById("txtIdProducto").value = "";
+		producto = 0;
 	}
 
-	//Si el producto está definido muestro su valor
-	else
-	{
-		document.getElementById("txtIdProducto").value = producto;
-	}
+	//Muestro los resultados por pantalla
+	document.getElementById("txtIdSuma").value = suma;
+	document.getElementById("txtIdProducto").value = producto;
+	
 }//FIN DE LA FUNCIÓN

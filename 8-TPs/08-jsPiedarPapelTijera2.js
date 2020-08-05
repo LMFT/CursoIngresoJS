@@ -81,15 +81,12 @@ function tijera()
      
 }//FIN DE LA FUNCIÓN
 
+
+function mostrarResultado()
+{
+	
 	document.getElementById("txtIdGanadas").value = contadorGanadas;
 	document.getElementById("txtIdPerdidas").value = contadorPerdidas;
 	document.getElementById("txtIdEmpatadas").value = contadorEmpates;
 
-function mostrarResultado()
-{
-	/*
-	document.getElementById("txtIdGanadas").value = contadorGanadas;
-	document.getElementById("txtIdPerdidas").value = contadorPerdidas;
-	document.getElementById("txtIdEmpatadas").value = contadorEmpates;
-*/
 }

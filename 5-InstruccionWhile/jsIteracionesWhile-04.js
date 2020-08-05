@@ -6,15 +6,12 @@ function mostrar()
 	//Declaro la variable y pido el numero al usuario
 	let numero;
 	
-	numero=prompt("Ingrese un número del 0 al 9 inclusive"); 
-
-	numero = parseFloat(numero);
+	numero=parseInt(prompt("Ingrese un número del 0 al 9 inclusive")); 
 
 	//Mientras el usuario ingrese numeros fuera del rango muestro por alert un mensaje de error y pido nuevamente el numero
-	while(numero < 0 || numero > 9) 
+	while(numero < 0 || numero > 9 || isNaN(numero))  
 	{
-		alert("El numero ingresado es inválido");
-		numero=parseFloat(prompt("Ingrese un número del 0 al 9 inclusive"));
+		numero=parseFloat(prompt("El numero ingresado es inválido. Reingrese un número del 0 al 9 inclusive"));
 	}
 
 	document.getElementById("txtIdNumero").value = numero;

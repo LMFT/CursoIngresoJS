@@ -11,7 +11,7 @@ function SacarResto()
 	let resto;
 
 	//Calculo el resto con el operador %
-	resto = dividendo % divisor
+	resto = dividendo % divisor;
 
 
 	//Muestro el resultado por alert

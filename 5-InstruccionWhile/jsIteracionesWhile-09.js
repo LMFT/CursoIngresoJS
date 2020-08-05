@@ -5,35 +5,48 @@ function mostrar()
 {	
 	//Declaro las variables y fuerzo la respuesta para entrar al while
 	let numero;
-	let respuesta = 's';
-	let maximo = -Infinity;
-	let minimo = Infinity;
+	let respuesta;
+	let max;
+	let min;
+	let flag = 0;
 
-	//Mientras el usuario quiera ingresar un numero se mantiene el bucle
-	while (respuesta == 's')
+	do
 	{
-		//Le pido un numero al usuario
-		numero = parseFloat(prompt("Ingrese un numero"));
-		
-	/* Para este ejercicio utilizo dos IF separados, para solucionar los problemas que ocasiona usar un solo dato
-	o usar una secuencia ascendente / descendente, dependiendo del primer bloque de codigo*/
+		//Le pido el dato al usuario
+		numero = parseFloat(prompt("Ingrese un número"));
 
-		//Si el numero es menor que el minimo lo almaceno en la variable 
-		if (numero < minimo)
+		while(isNaN(numero))
 		{
-			minimo = numero;
+			numero = parseFloat(prompt("El caracter ingresado no es un número. Reingrese un número"))
 		}
-		//Si el numero es mayor que el maximo lo almaceno en la variable
-		if (numero >= maximo)
-		{
-			maximo = numero;
-		}
-		//Le pregunto al usuario si quiere ingresar otro numero
-		respuesta = prompt("Si desea ingresar otro numero tipee si")
-	}
 
-	//Muestro los datos
-	document.getElementById("txtIdMaximo").value = maximo;
-	document.getElementById("txtIdMinimo").value = minimo;
+		//Analizo si es el primer numero
+		if (flag == 0)
+		{
+			max = numero;
+			min = numero;
+			flag = 1;
+		}
+
+		//Analizo si el numero ingresado es un nuevo max o min
+		if (numero > max)
+		{
+			max = numero;
+		}
+		else if(numero < min)
+		{
+			min = numero;
+		}
+
+		//Pregunto al usuario si quiere ingresaro otro numero
+
+		respuesta = prompt("Desea ingresar otro numero?");
+
+	}while(respuesta == 's');
+
+	//Muestro max y min al usuario
+
+	document.getElementById("txtIdMaximo").value = max + "(Máximo)";
+	document.getElementById("txtIdMinimo").value = min + "(Mínimo)";
 
 }//FIN DE LA FUNCIÓN

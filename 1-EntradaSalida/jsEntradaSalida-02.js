@@ -3,7 +3,7 @@ Debemos lograr tomar un nombre con 'prompt'
 y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	//Declaro las variaables
+	//Declaro las variables
 	let nombre;
 	
 	//Le pido el dato al usuario

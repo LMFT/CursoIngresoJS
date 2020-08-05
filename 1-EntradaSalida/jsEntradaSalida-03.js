@@ -4,13 +4,13 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	//Declaro la variable
-	let nombreIngresado;
+	let nombre;
 
 	//Asigno valor a la variable a traves de ID
-	nombreIngresado=document.getElementById("txtIdNombre").value;
+	nombre=document.getElementById("txtIdNombre").value;
 	
 	//Muestro el nombre
-	alert("El nombre ingresado es: " +nombreIngresado);
+	alert("El nombre ingresado es: " +nombre);
 
 }
 

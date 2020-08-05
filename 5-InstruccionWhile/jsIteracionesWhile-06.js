@@ -11,7 +11,12 @@ function mostrar()
 	while(i < 5)
 	{
 		//A medida que el usuario ingresa los numeros, los sumo y aumento el contador
-		numero = parseFloat(prompt("Ingrese un numero"));
+		numero = parseInt(prompt("Ingrese un numero"));
+		while(isNaN(numero))
+		{
+			numero = parseInt(prompt("El caracter ingresado no es un número, por favor ingrese un número"));
+		}
+		
 		suma += numero;
 		i++;
 	}

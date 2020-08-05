@@ -5,12 +5,12 @@ y lo muestro por 'ID' al presionar el botón 'mostrar'
 function mostrar()
 {
 	//Declato la variable
-	let nombreingresado;
+	let nombre;
 
 	//Pido el dato por prompt
-	nombreingresado= prompt("Inserte un nombre");
+	nombre= prompt("Inserte un nombre");
 
 	//Asigno el dato ingresado al cuadro de texto
-	document.getElementById("txtIdNombre").value = nombreingresado
+	document.getElementById("txtIdNombre").value = nombre;
 }
 

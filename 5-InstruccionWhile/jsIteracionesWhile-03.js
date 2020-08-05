@@ -9,8 +9,8 @@ function mostrar()
 	while(clave != "utn750")
 	{
 		//Mientras la contraseña sea incorrecta muestro un alert y vuelvo a pedir la clave
-		alert("La clave ingresada es inválida")
-		clave=prompt("Ingrese la clave")
+		clave=prompt("La clave invgresada es incorrecta. Ingrese la clave nuevamente");
 	}
+	alert("Bienvenido");
 	
 }//FIN DE LA FUNCIÓN

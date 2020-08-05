@@ -6,13 +6,12 @@ function mostrar()
 	//Declaro la variable y pido su sexo al usuario
 	let sexo;
 
-	sexo = prompt("Ingrese su sexo (F = Femenino; M = Masculino)");
+	sexo = prompt("Ingrese su sexo").toLowerCase;
 	
 	//Mientras el sexo ingresado sea invalido, muestro un mensaje de error por alert y vuelvo a pedir el dato
-	while(sexo != "m" && sexo != "f" && sexo != "M" && sexo != "F")
+	while(sexo != "m" && sexo != "f")
 	{
-		alert("El sexo ingresado es inválido");
-		sexo = prompt("Ingrese su sexo (F = Femenino; M = Masculino");
+		sexo = prompt("Sexo inválido. Reingrese su sexo").toLowerCase;
 	}
 
 	document.getElementById("txtIdSexo").value = sexo;

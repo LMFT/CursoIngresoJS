@@ -8,12 +8,12 @@ ej.: "la Resta es 750"*/
 function sumar()
 {	
 	//Declaro las variables y las inicializo
-	let numero_a=parseInt(document.getElementById("txtIdNumeroUno").value);
-	let numero_b=parseInt(document.getElementById("txtIdNumeroDos").value);
+	let num1=parseInt(document.getElementById("txtIdNumeroUno").value);
+	let num2=parseInt(document.getElementById("txtIdNumeroDos").value);
 	let resultado;
 
 	//Realizo el cálculo
-	resultado = numero_a + numero_b;
+	resultado = num1 + num2;
 
 	//Muestro el resultado por alert
 	alert("El resultado de la suma es: "+resultado);	
@@ -22,12 +22,12 @@ function sumar()
 function restar()
 {
 	//Declaro las variables y las inicializo
-	let numero_a=parseInt(document.getElementById("txtIdNumeroUno").value);
-	let numero_b=parseInt(document.getElementById("txtIdNumeroDos").value);
+	let num1=parseInt(document.getElementById("txtIdNumeroUno").value);
+	let num2=parseInt(document.getElementById("txtIdNumeroDos").value);
 	let resultado;
 
 	//Realizo el cálculo
-	resultado=numero_a-numero_b;
+	resultado=num1-num2;
 
 	//Muestro el resultado por alert
 	alert("el resultado de la resta es: "+resultado); 
@@ -36,12 +36,12 @@ function restar()
 function multiplicar()
 { 
 	//Declaro las variables y las inicializo
-	let numero_a=parseInt(document.getElementById("txtIdNumeroUno").value);
-	let numero_b=parseInt(document.getElementById("txtIdNumeroDos").value);
+	let num1=parseInt(document.getElementById("txtIdNumeroUno").value);
+	let num2=parseInt(document.getElementById("txtIdNumeroDos").value);
 	let resultado;
 
 	//Realizo el cálculo
-	resultado=numero_a*numero_b;
+	resultado=num1*num2;
 
 	//Muestro el resultado por alert
 	alert("El producto de los numeros es: "+resultado);
@@ -50,14 +50,14 @@ function multiplicar()
 function dividir()
 {
 	//Declaro e inicializo las variables
-	let numero_a=parseInt(document.getElementById("txtIdNumeroUno").value);
-	let numero_b=parseInt(document.getElementById("txtIdNumeroDos").value);
+	let num1=parseInt(document.getElementById("txtIdNumeroUno").value);
+	let num2=parseInt(document.getElementById("txtIdNumeroDos").value);
 	let resultado;
 
 	//Realizo una secuencia lógica para impedir la division por 0
 
 	//Si el divisor es 0 muestra un error por alert
-	if(numero_b=="0")
+	if(num2=="0")
 		{
 			
 			alert("La división ingresada no es válida");
@@ -67,9 +67,9 @@ function dividir()
 	else
 	{
 		
-		numero_a=parseInt(numero_a);
-		numero_b=parseInt(numero_b);
-		resultado = numero_a / numero_b;
+		num1=parseInt(num1);
+		num2=parseInt(num2);
+		resultado = num1 / num2;
 		alert("El resultado de la division es: "+resultado);
 	}
 }

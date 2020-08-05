@@ -5,16 +5,16 @@ mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
 	//Declaro las variables
-	let numero_a;
-	let numero_b;
+	let num1;
+	let num2;
 	let resultado;
 
 	//Inicializo las variables
-	numero_a=parseInt(document.getElementById("txtIdNumeroUno").value);
-	numero_b=parseInt(document.getElementById("txtIdNumeroDos").value);
+	num1=parseInt(document.getElementById("txtIdNumeroUno").value);
+	num2=parseInt(document.getElementById("txtIdNumeroDos").value);
 
 	//Realizo el caluclo y muestro el resultado por pantalla
-	resultado = numero_a + numero_b;
+	resultado = num1 + num2;
 
 	alert("El resultado de la suma es "+resultado);
 }
