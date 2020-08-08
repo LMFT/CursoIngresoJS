@@ -6,8 +6,8 @@ ej.: "El resto es 0 ."*/
 function SacarResto()
 {
 	//Declaro e inicializo las variables
-	let dividendo=document.getElementById("txtIdNumeroDividendo").value;
-	let divisor=document.getElementById("txtIdNumeroDivisor").value;
+	let dividendo=parseInt(document.getElementById("txtIdNumeroDividendo").value);
+	let divisor=parseInt(document.getElementById("txtIdNumeroDivisor").value);
 	let resto;
 
 	//Calculo el resto con el operador %

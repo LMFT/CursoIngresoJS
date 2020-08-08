@@ -11,6 +11,10 @@ function mostrar()
 	{
 		for(let i=1; i >= numero; i--)
 		{
+			if (i == 0)
+			{
+				i--;
+			}
 			if(numero % i == 0)
 			{
 				cantidad++;
