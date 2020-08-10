@@ -38,6 +38,7 @@ function mostrar()
 
 	
 	//Creo un bucle de 5 repeticiones (for)
+	// INICIO BUCLE //
 	for(let i = 0; i < 5; i++)
 	{
 		//Ingreso y valido las características de cada producto
@@ -62,11 +63,12 @@ function mostrar()
 		marca = prompt("Ingrese la marca del producto");
 		fabricante = prompt("Ingrese el fabricante del producto");
 
-		//Dependiendo del product
+		// Acumulo y cuento productos segun corresponda
 		if (producto == "alcohol")
 		{
 			acumuladorAlcohol+= cantidad;
 			contadorAlcohol++;	
+			// Ademas, si ingreso un alcohol, comparo el precio para saber si es el mas barato
 			if(precioAlcoholBarato > precio || flagAlcohol == 0)
 			{
 				flagAlcohol = 1;
@@ -86,7 +88,8 @@ function mostrar()
 			contadorJabon++;	
 		}
 	}
-
+	// FIN BUCLE //
+	//Comparo la cantidades para determinar cual producto tiene mayor cantidad
 	if(acumuladorAlcohol > acumuladorBarbijo && acumuladorAlcohol > acumuladorJabon)
 	{
 		promedio = acumuladorAlcohol / contadorAlcohol;
@@ -103,6 +106,7 @@ function mostrar()
 		productoMasComprado = "jabon"
 	}
 
+	// En caso de haber ingresado un alcohol al menos, modifico el mensaje que le muestro al usuario
 	if(flagAlcohol)
 	{
 		//El \n es la version de Javascript del </br> en HTML
@@ -110,6 +114,7 @@ function mostrar()
 		"\nCantidad de alcohol barato: " + cantidadAlcoholBarato +
 		"\nPrecio Alcohol Barato: " + precioAlcoholBarato;
 	}
+	// Muestro el resto de los datos
 	mensajePromedio = "B- El producto mas comprado es " + productoMasComprado + 
 	"\n y en promedio compramos " + promedio + " unidades por compra";
 

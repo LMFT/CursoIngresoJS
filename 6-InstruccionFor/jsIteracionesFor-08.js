@@ -19,7 +19,6 @@ function mostrar()
 		if((numero % i == 0 && flag == 0) || numero <=1)
 		{
 			flag = 1;
-			mensaje = "no" + mensaje;
 			break;
 		}
 	}

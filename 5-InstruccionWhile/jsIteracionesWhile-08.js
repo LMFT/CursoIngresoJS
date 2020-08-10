@@ -9,6 +9,7 @@ function mostrar()
 	let producto = 1;
 	let numero;
 	let flag = 0;
+	let
 	
 	//Mientras el usuario quiera ingresar otra respuesta se mantiene el bucle
 	do

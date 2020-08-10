@@ -8,26 +8,34 @@ d) cuantas personas de la tercera edad( mas de 60 años) , tienen mas de 38 de t
 e) El promedio de edad entre los hombres solteros.*/
 function mostrar()
 {
-	let nombre;
 	let edad;
+	let estadoCivil;
+	let nombre;
+	let masTemperatura;
+	let nombreMasTemperatura;
+	let promedio;
+	let respuesta;
 	let sexo;
 	let temperatura;
-	let estadoCivil;
-	let contadorViudos = 0;
-	let nombreMasTemperatura;
-	let masTemperatura;
-	let contadorTerceraEdad = 0;
-	let contadorSolterosViudos = 0;
-	let respuesta;
+
 	let flag = 0;
-	let promedio;
+
 	let cantidadSolteros = 0;
+	let contadorSolterosViudos = 0;
+	let contadorTerceraEdad = 0;
+	let contadorViudos = 0;
 	let edadSolteros = 0;
 	
 	do
 	{
 	
 	nombre = prompt("Ingrese su nombre");
+	
+	while (!(isNaN(nombre)))
+	{
+		nombre = prompt("Error. Ingrese su nombre");
+		
+	}
 	edad = parseInt(prompt("Ingrese su edad"));
 
 	while (edad<0 || isNaN(edad) || edad > 100)
